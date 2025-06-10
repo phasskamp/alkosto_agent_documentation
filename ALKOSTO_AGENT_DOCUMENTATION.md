@@ -95,7 +95,7 @@ export async function POST(request: NextRequest) {
 **3. Environment Variables für Vercel:**
 ```bash
 # Vercel Environment Variables (.env.production)
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_API_BASE=https://openrouter.ai/api/v1
 LETTA_SERVER_URL=http://your-letta-server:8283
 LETTA_AGENT_ID=agent-e20e5afd-ef80-42b5-9042-1fbdc37d9fe2
@@ -225,7 +225,7 @@ LETTA_SERVER_URL=https://your-letta-server.railway.app
 LETTA_AGENT_ID=agent-e20e5afd-ef80-42b5-9042-1fbdc37d9fe2
 
 # OpenRouter (falls direkt verwendet)
-OPENAI_API_KEY=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
+OPENAI_API_KEY=YOUR_OPENROUTER_API_KEY_HERE
 OPENAI_API_BASE=https://openrouter.ai/api/v1
 
 # Optional: API Authentication
@@ -275,7 +275,7 @@ pip install -r requirements.txt
 **2. OpenRouter Setup:**
 ```bash
 # Environment Variables setzen (in jeder Session!)
-export OPENAI_API_KEY="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"
+export OPENAI_API_KEY="YOUR_OPENROUTER_API_KEY_HERE"
 export OPENAI_API_BASE="https://openrouter.ai/api/v1"
 ```
 
@@ -365,7 +365,7 @@ composio-core, grpcio, httpx, matplotlib, numpy
 
 ### OpenRouter Konfiguration:
 ```bash
-export OPENAI_API_KEY="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"
+export OPENAI_API_KEY="YOUR_OPENROUTER_API_KEY_HERE"
 export OPENAI_API_BASE="https://openrouter.ai/api/v1"
 ```
 
@@ -497,7 +497,7 @@ from letta.schemas.llm_config import LLMConfig
 import os
 
 # OpenRouter Setup
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "YOUR_OPENROUTER_API_KEY_HERE"
 os.environ["OPENAI_API_BASE"] = "https://openrouter.ai/api/v1"
 
 client = create_client(base_url='http://localhost:8283')
@@ -602,7 +602,7 @@ URL_DIRECTA: {row.get('link', 'N/A')}
 ```bash
 # Test OpenRouter direkt
 curl -X POST "https://openrouter.ai/api/v1/chat/completions" \
-  -H "Authorization: Bearer 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" \
+  -H "Authorization: Bearer YOUR_OPENROUTER_API_KEY_HERE" \
   -H "Content-Type: application/json" \
   -d '{"model":"openai/gpt-4o-mini","messages":[{"role":"user","content":"test"}]}'
 ```
